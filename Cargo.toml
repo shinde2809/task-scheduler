@@ -42,3 +42,7 @@ prometheus = { version = "0.13", features = ["process"] }
 
 # Env file loading
 dotenvy = "0.15"
+
+strum = "0.28.0"
+
+strum_macros = "0.26"
