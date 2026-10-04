@@ -1,0 +1,48 @@
+[package]
+name = "task-schedular"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Web framework
+actix-web = "4"
+
+# Kafka client
+rdkafka = { version = "0.36", features = ["cmake-build"] }
+
+# Redis client
+redis = { version = "0.25", features = ["tokio-comp"] }
+
+# PostgreSQL client
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "postgres", "uuid", "chrono"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Unique IDs
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Error handling
+thiserror = "1"
+anyhow = "1"
+
+# Prometheus metrics
+prometheus = { version = "0.13", features = ["process"] }
+
+# Env file loading
+dotenvy = "0.15"
+
+strum = "0.28.0"
+
+strum_macros = "0.26"
